@@ -1,0 +1,141 @@
+/* Cores Principais*/
+:root{
+ --vermelho: #E50914;
+ --preto: #141414;
+ }
+/* Configuraçãopadrão inicial*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /*Não ultrapassar a bordada caixa*/  
+}
+
+body{
+    background-color: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color:white;
+    
+}
+
+/*configurando barra de navegação*/
+
+header .conteiner{   
+    display: flex; /*Alinha os elementos em linha( é padrão do display colocar tudo em linha*/
+    justify-content: space-between; /*justify-content alinha no eixo x, e space between deixa uma espaço entre o h1 e os elementos nav*/
+    align-items: center;/*alinha no eixo Y*/
+}
+
+header .logo{
+    color:var(--vermelho) ;
+    font-family: 'Arial Black', Times;
+    margin-left: 5px;
+    font-size: 40px;
+
+}
+
+header nav a{
+    text-decoration: none;/* retira o sublinhado */
+    margin-right: 10px;
+    color:rgba(245, 245, 245, 0.336)
+
+}
+header nav a:hover{
+    color: #fff;
+}
+
+/*Destaque*/
+
+.destaque{
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/destaque.png');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.destaque .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.destaque .titulo{
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.destaque .conteiner{
+    width: 50%;
+    margin-left: 10px;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 12px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color: whitesmoke;
+    color: black;
+
+}
+
+button i {
+    margin-right: 10px;
+}
+
+.img-carrossel{
+    height: 300px;
+    width: 100%;
+    display: block;
+    border: 3px solid rgb(230, 225, 225);
+}
+
+.carrossel{
+    margin: 5px;
+
+}
+.carrossel h3 {
+    text-decoration: none;
+    font-size: 20px;
+    color:rgba(245, 245, 245, 0.336);
+    margin: 10px;
+    
+
+}
+
+.item{
+    position: relative;
+}
+
+#descricao-carrossel{
+    position: absolute;
+    font-size: 20px;
+    left: 5%;
+    top: 8px;
+    background-color: rgba(0,0,0,.50);
+    padding: 3px;
+
+}
+
+@media screen and (max-width: 600px) {
+    header .conteiner{
+        flex-direction: column;
+    }
+    .destaque .conteiner{
+        width: 100%;
+       
+    }
+    
+}
